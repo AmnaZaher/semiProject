@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %> | Note Taking App</title>
+    <link rel="stylesheet" href="../public/css/styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>📒 Note Taking App</h1>
+        <nav>
+            <ul>
+                <li><a href="/">🏠 Home</a></li>
+                <li><a href="/auth/register">📝 Register</a></li>
+                <li><a href="/auth/login">🔑 Login</a></li>
+                <li><a href="/notes">🗒️ Notes</a></li>
+                <li><a href="/categories">📂 Categories</a></li>
+                <li><a href="/profile">👤 Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to your Note Taking App 👋</h2>
+        <p>This is a simple app to manage <strong>notes</strong>, <strong>categories</strong>, and your <strong>profile</strong>.</p>
+        
+        <section>
+            <h3>🚀 Features</h3>
+            <ul>
+                <li>User Authentication (Register, Login, OTP)</li>
+                <li>Create and manage your Notes</li>
+                <li>Organize Notes by Categories</li>
+                <li>Update Profile Information</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>👉 Quick Actions</h3>
+            <div class="actions">
+                <a class="btn" href="/auth/register">Create Account</a>
+                <a class="btn" href="/auth/login">Login</a>
+                <a class="btn" href="/notes">View Notes</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ using <strong>Node.js + Express + MongoDB</strong></p>
+    </footer>
+</body>
+</html>

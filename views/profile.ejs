@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %> | Note Taking App</title>
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>👤 Profile</h1>
+        <a href="/">⬅ Back to Home</a>
+    </header>
+
+    <main>
+        <% if (user) { %>
+            <h2>Your Info</h2>
+            <ul>
+                <li>Username: <%= user.username %></li>
+                <li>Email: <%= user.email %></li>
+                <li>Name: <%= user.firstName %> <%= user.lastName %></li>
+            </ul>
+        <% } else { %>
+            <p>Not Authenticated</p>
+        <% } %>
+
+        <h2>Change Password</h2>
+        <form action="/profile/api/change-password" method="POST">
+            <label>Old Password</label>
+            <input type="password" name="oldPassword" required>
+            <label>New Password</label>
+            <input type="password" name="newPassword" required>
+            <label>Confirm Password</label>
+            <input type="password" name="confirmPassword" required>
+            <button type="submit">Update Password</button>
+        </form>
+
+        <h2>Update Name</h2>
+        <form action="/profile/api/change-first-last-name" method="POST">
+            <label>First Name</label>
+            <input type="text" name="firstName">
+            <label>Last Name</label>
+            <input type="text" name="lastName">
+            <button type="submit">Update Name</button>
+        </form>
+
+        <h2>Enable/Disable OTP</h2>
+        <form action="/profile/api/enable-otp" method="POST">
+            <label>Enable OTP?</label>
+            <select name="enableOtp">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <button type="submit">Update</button>
+        </form>
+    </main>
+</body>
+</html>

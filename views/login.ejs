@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %> | Note Taking App</title>
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>🔑 Login</h1>
+        <a href="/">⬅ Back to Home</a>
+    </header>
+
+    <main>
+        
+
+        <form action="/auth/login/start" method="POST">
+            <label>Username</label>
+            <input type="text" name="username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Send OTP</button>
+        </form>
+
+        
+        
+        <h2>Verify OTP</h2>
+        <form action="/auth/login/verify" method="POST">
+            <label>Username</label>
+            <input type="text" name="username" required>
+
+            <label>OTP</label>
+            <input type="text" name="otpCode" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </main>
+</body>
+</html>
